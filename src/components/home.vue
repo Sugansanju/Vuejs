@@ -1,7 +1,17 @@
 <template>
     <div class="home">
-
-        <div class="container">
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+     <ul class="navbar-nav">
+       <li class="nav-item active">
+         <a class="nav-link"> <router-link to="/home">HOME</router-link></a>
+     </li>
+     <li class="nav-item">
+    <li><router-link to="/SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></router-link></li>
+    <li><router-link to="/SignIn"><span class="glyphicon glyphicon-log-in"></span>Sign In </a></router-link></li>
+</li>
+     </ul>
+   </nav>
+<div class="container">
   <div class="jumbotron">
     <h1>What is Vue.js?</h1>
     <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.</p>

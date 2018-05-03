@@ -1,19 +1,25 @@
 <template>
   <div class="hello">
-          <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand"><router-link to="/Home">HOME</router-link></a>
-          </div>
-
-        <ul class="nav navbar-nav navbar-right">
-      <li><router-link to="/SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></router-link></li>
-      <li><router-link to="/SignIn"><span class="glyphicon glyphicon-log-in"></span>Sign In </a></router-link></li>
-    </ul>
-
-  </div>
-</nav>
-
+      <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+   <ul class="navbar-nav">
+     <li class="nav-item active">
+       <a class="nav-link"> <router-link to="/home">HOME</router-link></a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="#">Link</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="#">Link</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link disabled" href="#">Disabled</a>
+     </li>
+   </ul>
+   <ul class="nav navbar-nav navbar-right">
+ <li><router-link to="/SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></router-link></li>
+ <li><router-link to="/SignIn"><span class="glyphicon glyphicon-log-in"></span>Sign In </a></router-link></li>
+ </ul>
+ </nav>
 <div class="container">
 <div class="jumbotron">
 <h1 class="text-center">Vue.js</h1>
