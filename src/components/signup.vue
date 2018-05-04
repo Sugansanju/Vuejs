@@ -1,8 +1,6 @@
 <template>
     <div class="signup">
-
-        <!-- Navigation -->
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7B68EE;">
+          <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7B68EE;">
             <div class="container">
               <a class="navbar-brand" href="#/home">
                 <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
@@ -25,22 +23,25 @@
                 </ul>
               </div>
             </div>
-          </nav>
-        <!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-     <ul class="navbar-nav">
-         <li class="nav-item active">
-           <a class="nav-link link" href="#/home"> HOME</a>
-         </li>
-     </ul>
-         <ul class="nav navbar-nav navbar-right">
-         <li class="nav-item active">
-           <a class="nav-link link" href="#/Signup">signup</a>
-         </li>
-         <li class="nav-item active">
-           <a class="nav-link link" href="#/Signin">Signin</a>
-         </li>
-     </ul>
-   </nav> -->
+          </nav> -->
+          <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
+    <a class="navbar-brand" href="#/home">
+        <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link" href="#/SignUp">Signup</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
    <div class="col-md-offset-8">
 <form >
 <hgroup>
@@ -78,56 +79,6 @@
     </div>
 </div>
 </section>
-<!-- <div class="container">
-<div class="fix-bottom">
-<div class="col-md-8 col-md-offset-2">
-    <div class="panel panel-primary">
-      <div class="panel-heading">Signin</div>
-      <div class="panel-body">
-          <form  class="form-horizontal">
-          <div  class="form-group">
-              <div class="col-md-6 col-md-offset-2 login-input">
-              <input  type="text" placeholder="Email/Mobile number" class="form-control">
-          </div>
-      </div>
-        <div  class="form-group">
-            <div class="col-md-6  col-md-offset-2 login-input">
-                <input  type="password" placeholder="Password" class="form-control">
-             </div>
-         </div>
-         <div class="form-group">
-             <div  class="col-md-6 col-md-offset-4">
-                 <div class="checkbox">
-                     <label >
-                         <input  type="checkbox" name="remember"> Remember Me
-                   </label>
-               </div>
-           </div>
-       </div>
-       <div  class="form-group">
-           <div class="col-md-8 col-md-offset-4">
-               <button  type="submit" class="btn btn-primary">
-                     Login
-                 </button>
-
-             </div>
-             <div class="col-md-8 col-md-offset-3 ">
-                 <a  href="" class="btn btn-link">
-            Create New Account
-             </a>
-           </div>
-           <div class="col-md-8 col-md-offset-3">
-               <a  href="" class=" btn btn-link">
-               Forgot Your Password?
-           </a>
-       </div>
-       </div>
-   </form>
-</div>
-  </div>
-</div>
-</div>
-</div> -->
 </div>
 </template>
 <style>
@@ -178,6 +129,7 @@ input {
 	border-radius: 0;
 	border-bottom: 1px solid #757575;
 }
+
 
 input:focus { outline: none; }
 
@@ -340,78 +292,6 @@ input:focus ~ .highlight {
     padding-bottom: 200%;
     opacity: 0;
   }
-}
-
-footer { text-align: center; }
-
-footer p {
-	color: #888;
-	font-size: 13px;
-	letter-spacing: .4px;
-}
-
-footer a {
-	color: #4a89dc;
-	text-decoration: none;
-	transition: all .2s ease;
-}
-
-footer a:hover {
-	color: #666;
-	text-decoration: underline;
-}
-
-footer img {
-	width: 80px;
-	transition: all .2s ease;
-}
-
-footer img:hover { opacity: .83; }
-
-footer img:focus , footer a:focus { outline: none; }
-#lab_social_icon_footer {
-  padding: 40px 0;
-  background-color: #dedede;
-}
-
-#lab_social_icon_footer a {
-  color: #333;
-}
-
-#lab_social_icon_footer .social:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-
-#lab_social_icon_footer .social {
-  -webkit-transform: scale(0.8);
-  /* Browser Variations: */
-
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-}
-/*
-    Multicoloured Hover Variations
-*/
-
-#lab_social_icon_footer #social-fb:hover {
-  color: #3B5998;
-}
-
-#lab_social_icon_footer #social-tw:hover {
-  color: #4099FF;
-}
-
-#lab_social_icon_footer #social-gp:hover {
-  color: #d34836;
-}
-
-#lab_social_icon_footer #social-insta:hover {
-  color: #e4405f;
 }
 /*  */
 </style>

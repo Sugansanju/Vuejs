@@ -1,6 +1,6 @@
 <template>
-    <div class="signin">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7B68EE;">
+    <div >
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7B68EE;">
           <div class="container">
             <a class="navbar-brand" href="#/home">
               <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
@@ -23,7 +23,25 @@
               </ul>
             </div>
           </div>
-        </nav>
+        </nav> -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
+  <a class="navbar-brand" href="#/home">
+      <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link" href="#/SignUp">Signup</a>
+      </li>
+    </ul>
+  </div>
+</nav>
    <form>
 <hgroup>
   <h2>LOGIN</h2>
@@ -92,7 +110,6 @@
                      <label class="radio-inline">
                          <input type="radio" name="role" value="Student" checked="checked">Student
                      </label>
-
                   </label>
              </div>
                  <div class="form-group">
@@ -109,7 +126,6 @@
                        <button  type="submit" class="btn btn-primary">
                              Login
                          </button>
-
                      </div>
                      <div class="col-md-8 col-md-offset-3 ">
                          <a  href="" class="btn btn-link">
@@ -129,47 +145,33 @@
         </div>
         </div>
         <footer class="page-footer font-small indigo pt-0">
-
         <div class="container">
-
             First row-->
             <!-- <div class="row">
-
                 <div class="col-md-12 py-5">
-
                     <div class="mb-5 flex-center text-center">
-
-
                         <a class="fb-ic">
                             <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                         </a>
-
                         <a class="tw-ic">
                             <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                         </a>
-
                         <a class="gplus-ic">
                             <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                         </a>
-
                         <a class="li-ic">
                             <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                         </a>
-
                         <a class="ins-ic">
                             <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                         </a>
-
                         <a class="pin-ic">
                             <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
                         </a>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </footer>
      -->
     </div>
@@ -180,24 +182,18 @@
     color:#fff;
 }
 *{ box-sizing:border-box; }
-
 body {
 	font-family: Helvetica;
 	background: #eee;
   -webkit-font-smoothing: antialiased;
 }
-
 hgroup {
 	text-align:center;
 	margin-top: 4em;
 }
-
 h1, h3 { font-weight: 300; }
-
 h1 { color: #636363; }
-
 h3 { color: #4a89dc; }
-
 form {
 	width: 380px;
 	margin: 4em auto;
@@ -206,12 +202,10 @@ form {
 	border: 1px solid #ebebeb;
 	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
 }
-
 .group {
 	position: relative;
 	margin-bottom: 45px;
 }
-
 input {
 	font-size: 18px;
 	padding: 10px 10px 10px 5px;
@@ -224,12 +218,8 @@ input {
 	border-radius: 0;
 	border-bottom: 1px solid #757575;
 }
-
 input:focus { outline: none; }
-
-
 /* Label */
-
 label {
 	color: #999;
 	font-size: 18px;
@@ -240,26 +230,19 @@ label {
 	top: 10px;
 	transition: all 0.2s ease;
 }
-
-
 /* active */
-
 input:focus ~ label, input.used ~ label {
 	top: -20px;
   transform: scale(.75); left: -2px;
 	/* font-size: 14px; */
 	color: #4a89dc;
 }
-
-
 /* Underline */
-
 .bar {
 	position: relative;
 	display: block;
 	width: 100%;
 }
-
 .bar:before, .bar:after {
 	content: '';
 	height: 2px;
@@ -269,19 +252,11 @@ input:focus ~ label, input.used ~ label {
 	background: #4a89dc;
 	transition: all 0.2s ease;
 }
-
 .bar:before { left: 50%; }
-
 .bar:after { right: 50%; }
-
-
 /* active */
-
 input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
-
-
 /* Highlight */
-
 .highlight {
 	position: absolute;
 	height: 60%;
@@ -291,25 +266,16 @@ input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
 	pointer-events: none;
 	opacity: 0.5;
 }
-
-
 /* active */
-
 input:focus ~ .highlight {
 	animation: inputHighlighter 0.3s ease;
 }
-
-
 /* Animations */
-
 @keyframes inputHighlighter {
 	from { background: #4a89dc; }
 	to 	{ width: 0; background: transparent; }
 }
-
-
 /* Button */
-
 .button {
   position: relative;
   display: inline-block;
@@ -330,20 +296,13 @@ input:focus ~ .highlight {
   transition: all 0.15s ease;
 }
 .button:focus { outline: 0; }
-
-
 /* Button modifiers */
-
 .buttonBlue {
   background: #4a89dc;
   text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
 }
-
 .buttonBlue:hover { background: #357bd8; }
-
-
 /* Ripples container */
-
 .ripples {
   position: absolute;
   top: 0;
@@ -353,10 +312,7 @@ input:focus ~ .highlight {
   overflow: hidden;
   background: transparent;
 }
-
-
 /* Ripples circle */
-
 .ripplesCircle {
   position: absolute;
   top: 50%;
@@ -368,73 +324,55 @@ input:focus ~ .highlight {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.25);
 }
-
 .ripples.is-active .ripplesCircle {
   animation: ripples .4s ease-in;
 }
-
-
 /* Ripples animation */
-
 @keyframes ripples {
   0% { opacity: 0; }
-
   25% { opacity: 1; }
-
   100% {
     width: 200%;
     padding-bottom: 200%;
     opacity: 0;
   }
 }
-
 footer { text-align: center; }
-
 footer p {
 	color: #888;
 	font-size: 13px;
 	letter-spacing: .4px;
 }
-
 footer a {
 	color: #4a89dc;
 	text-decoration: none;
 	transition: all .2s ease;
 }
-
 footer a:hover {
 	color: #666;
 	text-decoration: underline;
 }
-
 footer img {
 	width: 80px;
 	transition: all .2s ease;
 }
-
 footer img:hover { opacity: .83; }
-
 footer img:focus , footer a:focus { outline: none; }
-
 #lab_social_icon_footer {
   padding: 40px 0;
   background-color: #dedede;
 }
-
 #lab_social_icon_footer a {
   color: #333;
 }
-
 #lab_social_icon_footer .social:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-
 #lab_social_icon_footer .social {
   -webkit-transform: scale(0.8);
   /* Browser Variations: */
-
   -moz-transform: scale(0.8);
   -o-transform: scale(0.8);
   -webkit-transition-duration: 0.5s;
@@ -444,19 +382,15 @@ footer img:focus , footer a:focus { outline: none; }
 /*
     Multicoloured Hover Variations
 */
-
 #lab_social_icon_footer #social-fb:hover {
   color: #3B5998;
 }
-
 #lab_social_icon_footer #social-tw:hover {
   color: #4099FF;
 }
-
 #lab_social_icon_footer #social-gp:hover {
   color: #d34836;
 }
-
 #lab_social_icon_footer #social-insta:hover {
   color:#e4405f;
 }
@@ -466,7 +400,6 @@ export default {
     name:'signin'
 }
 $(window, document, undefined).ready(function() {
-
   $('input').blur(function() {
     var $this = $(this);
     if ($this.val())
@@ -474,30 +407,21 @@ $(window, document, undefined).ready(function() {
     else
       $this.removeClass('used');
   });
-
   var $ripples = $('.ripples');
-
   $ripples.on('click.Ripples', function(e) {
-
     var $this = $(this);
     var $offset = $this.parent().offset();
     var $circle = $this.find('.ripplesCircle');
-
     var x = e.pageX - $offset.left;
     var y = e.pageY - $offset.top;
-
     $circle.css({
       top: y + 'px',
       left: x + 'px'
     });
-
     $this.addClass('is-active');
-
   });
-
   $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
   	$(this).removeClass('is-active');
   });
-
 });
 </script>

@@ -1,36 +1,39 @@
 <template>
   <div class="hello">
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7B68EE;">
-        <div class="container">
-          <a class="navbar-brand" href="#/home">
-            <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
-          </a>
-
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link link" href="#/home">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link" href="#/SignUp">Signup</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link" href="#/SignIn">Signin</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
+      <a class="navbar-brand" href="#/home">
+      <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <li class="nav-item active">
+      <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link link" href="#/SignUp">Signup</a>
+      </li>
+      </ul>
+      </div>
       </nav>
 <div class="container">
-<div class="jumbotron">
-<h1 class="text-center">Vue.js</h1>
-
+    <div class="row">
+  <div class="col-md-6 py-5">
+      <div class="vue-image">
+      <img src="../assets/vuejs.png" style="max-width:350px; margin-top:190px;">
+  </div>
+</div>
+<div class="col-md-6 py-5 centered-content" style="margin-top:250px;">
+    <h1>
+    <strong><font >Overview Of Vue.js</font></strong>
+</h1>
+    <p><font color="#0B5345"><h5>Vue.js is a popular JavaScript front-end framework that was built to organize and simplify web development.
+    </h5></font></p>
 </div>
 </div>
-
+</div>
 </div>
 </template>
 
