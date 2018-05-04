@@ -1,25 +1,29 @@
 <template>
   <div class="hello">
-      <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-   <ul class="navbar-nav">
-     <li class="nav-item active">
-       <a class="nav-link"> <router-link to="/home">HOME</router-link></a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link" href="#">Link</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link" href="#">Link</a>
-     </li>
-     <li class="nav-item">
-       <a class="nav-link disabled" href="#">Disabled</a>
-     </li>
-   </ul>
-   <ul class="nav navbar-nav navbar-right">
- <li><router-link to="/SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></router-link></li>
- <li><router-link to="/SignIn"><span class="glyphicon glyphicon-log-in"></span>Sign In </a></router-link></li>
- </ul>
- </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7B68EE;">
+        <div class="container">
+          <a class="navbar-brand" href="#/home">
+            <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link link" href="#/home">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#/SignUp">Signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#/SignIn">Signin</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
 <div class="container">
 <div class="jumbotron">
 <h1 class="text-center">Vue.js</h1>
@@ -42,7 +46,15 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style >
+
+.link{
+    color:#fff;
+}
+.lc{
+    color:#fff;
+}
+
 h1, h2 {
   font-weight: normal;
 }

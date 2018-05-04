@@ -1,72 +1,116 @@
 <template>
     <div class="home">
-        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-     <ul class="navbar-nav">
-       <li class="nav-item active">
-         <a class="nav-link"> <router-link to="/home">HOME</router-link></a>
-     </li>
-     <li class="nav-item">
-    <li><router-link to="/SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></router-link></li>
-    <li><router-link to="/SignIn"><span class="glyphicon glyphicon-log-in"></span>Sign In </a></router-link></li>
-</li>
-     </ul>
-   </nav>
-<div class="container">
-  <div class="jumbotron">
-    <h1>What is Vue.js?</h1>
-    <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.</p>
-  </div>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7B68EE;">
+            <div class="container">
+            <a class="navbar-brand" href="#/home">
+              <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
+            </a>
 
-</div>
-<footer class="page-footer font-small indigo pt-0">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link link" href="#/home">Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link" href="#/SignUp">Signup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link" href="#/SignIn">Signin</a>
+                </li>
 
-<!--Footer Links-->
-<div class="container">
+              </ul>
 
-    <!--First row-->
-    <div class="row">
-
-        <!--First column-->
-        <div class="col-md-12 py-5">
-
-            <div class="mb-5 flex-center text-center">
-
-                <!--Facebook-->
-                <a class="fb-ic">
-                    <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Twitter-->
-                <a class="tw-ic">
-                    <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Google +-->
-                <a class="gplus-ic">
-                    <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Linkedin-->
-                <a class="li-ic">
-                    <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Instagram-->
-                <a class="ins-ic">
-                    <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                </a>
-                <!--Pinterest-->
-                <a class="pin-ic">
-                    <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
-                </a>
-            </div>
         </div>
-        <!--/First column-->
-    </div>
-    <!--/First row-->
-</div>
-<!--/Footer Links-->
 
-</footer>
-<!--/Footer-->
+        </nav>
+<div class="container">
+    <div class="row">
+  <div class="col-md-6 py-5">
+      <div class="vue-image">
+      <img src="../assets/vuejs.png" style="max-width:350px; margin-top:190px;">
+  </div>
+</div>
+<div class="col-md-6 py-5 centered-content" style="margin-top:250px;">
+    <h1>
+    <strong><font >Overview Of Vue.js</font></strong>
+</h1>
+    <p><font color="#0B5345"><h5>Vue.js is a popular JavaScript front-end framework that was built to organize and simplify web development.
+    </h5></font></p>
+</div>
+</div>
+</div>
+<section id="lab_social_icon_footer">
+<!-- Include Font Awesome Stylesheet in Header -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+        <div class="text-center center-block">
+                <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	           <a href="https://www.instagram.com/?hl=en"><i id="social-insta" class="fa fa-instagram fa-3x social"></i></a>
+    </div>
+</div>
+</section>
     </div>
 </template>
+<style>
+vue-image {
+    height: 100vh;
+    padding-bottom: 88px;
+    top: 88px;
+    max-width: 483px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.link{
+    color:#fff;
+}
+#lab_social_icon_footer {
+  padding: 40px 0;
+  background-color: #dedede;
+}
+
+#lab_social_icon_footer a {
+  color: #333;
+}
+
+#lab_social_icon_footer .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+#lab_social_icon_footer .social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+/*
+    Multicoloured Hover Variations
+*/
+
+#lab_social_icon_footer #social-fb:hover {
+  color: #3B5998;
+}
+
+#lab_social_icon_footer #social-tw:hover {
+  color: #4099FF;
+}
+
+#lab_social_icon_footer #social-gp:hover {
+  color: #d34836;
+}
+
+#lab_social_icon_footer #social-insta:hover {
+  color: #e4405f;
+}
+</style>
 <script>
 export default {
     name:'home'
