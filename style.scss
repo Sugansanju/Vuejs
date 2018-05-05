@@ -10,10 +10,117 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+
+$primary:       $pink !default;
+
+$border-radius:               0rem !default;
+$border-radius-lg:            0rem !default;
+$border-radius-sm:            0rem !default;
+
+$input-btn-focus-width:       0rem !default;
+
+$input-btn-focus-box-shadow:  0 0 0 0 !default;
+
 * {
   box-sizing: border-box;
 }
+.form-control {
+ border:none !important;
+ border-bottom: 1px #ccc solid !important;
+ background: #fff !important;
 
+
+}
+
+
+.form-control:focus ~ label, .form-control.used ~ label {
+	top: -20px;
+  transform: scale(.75); left: -2px;
+	/* font-size: 14px; */
+	color: #4a89dc;
+}
+
+
+/* Underline */
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before, .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #4a89dc;
+	transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+.form-control:focus ~ .bar:before, .form-control:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+
+/* active */
+
+.form-control:focus ~ .highlight {
+	animation: inputHighlighter 0.3s ease;
+}
+
+
+/* Animations */
+
+@keyframes inputHighlighter {
+	from { background: #4a89dc; }
+	to 	{ width: 0; background: transparent; }
+}
+
+.btn {
+
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2) ;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+}
+.btn-wave {
+    .waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+}
 body {
   margin: 0px;
   font-family: 'segoe ui';
@@ -107,25 +214,25 @@ body {
     overflow-y: auto;
   }
 }
-input {
-	font-size: 18px;
-	padding: 10px 10px 10px 5px;
-	-webkit-appearance: none;
-	display: block;
-	background: #fafafa;
-	color: #636363;
-	width: 100%;
-	border: none;
-	border-radius: 0;
-	border-bottom: 1px solid #757575;
-}
+// input {
+// 	font-size: 18px;
+// 	padding: 10px 10px 10px 5px;
+// 	-webkit-appearance: none;
+// 	display: block;
+// 	background: #fafafa;
+// 	color: #636363;
+// 	width: 100%;
+// 	border: none;
+// 	border-radius: 0;
+// 	border-bottom: 1px solid #757575;
+// }
 
 .form-control {
     font-size: 18px !important;
     padding: 10px 10px 10px 5px !important;
     -webkit-appearance: none !important;
     display: block !important;
-    background: #fafafa !important;
+    // background: #fafafa !important;
     color: #636363 !important;
     width: 100% !important;
     border: none !important;

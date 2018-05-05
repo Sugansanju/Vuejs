@@ -43,13 +43,13 @@
     </div>
   </nav>
    <div class="col-md-offset-8">
-<form >
+<form>
 <hgroup>
   <h2>Signup</h2>
 </hgroup>
   <div class="group">
     <input type="text" required><span class="highlight"></span><span class="bar"></span>
-    <label>First name</label>
+<label>Name</label>
   </div>
 <div class="group">
     <input type="email" required><span class="highlight"></span><span class="bar"></span>
@@ -63,13 +63,32 @@
     <input type="password" required><span class="highlight"></span><span class="bar"></span>
     <label>Password</label>
   </div>
-  <button type="submit" class="button"style="background-color:#7B68EE;">Signup
-    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+ <h4>Role</h4>
+ <div class="group">
+ <div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline1">Teacher</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline2">Parent</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline3">Student</label>
+</div>
+</div>
+  <button type="submit" class="button align-self-baseline"style="background-color:#7B68EE;">
+      Signup
+    <div class="ripples buttonRipples">
+        <span class="ripplesCircle">
+        </span>
+    </div>
   </button>
 </form>
-</div><section id="lab_social_icon_footer">
-<!-- Include Font Awesome Stylesheet in Header -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</div>
+<section id="lab_social_icon_footer">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
         <div class="text-center center-block">
                 <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
@@ -88,7 +107,7 @@
 *{ box-sizing:border-box; }
 
 body {
-	font-family: Helvetica;
+	font-family: Palatino Linotype;
 	background: #eee;
   -webkit-font-smoothing: antialiased;
 }
@@ -97,7 +116,7 @@ hgroup {
 	text-align:center;
 }
 
-h1, h3 { font-weight: 300; }
+h1, h3 { font-weight: 150; }
 
 h1 { color: #636363; }
 
@@ -116,8 +135,7 @@ form {
 	position: relative;
 	margin-bottom: 45px;
 }
-
-input {
+ input {
 	font-size: 18px;
 	padding: 10px 10px 10px 5px;
 	-webkit-appearance: none;
@@ -141,7 +159,7 @@ label {
 	font-size: 18px;
 	font-weight: normal;
 	position: absolute;
-	pointer-events: none;
+	/* pointer-events: none; */
 	left: 5px;
 	top: 10px;
 	transition: all 0.2s ease;
@@ -153,7 +171,7 @@ label {
 input:focus ~ label, input.used ~ label {
 	top: -20px;
   transform: scale(.75); left: -2px;
-	/* font-size: 14px; */
+
 	color: #4a89dc;
 }
 
@@ -200,8 +218,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
 
 
 /* active */
-
-input:focus ~ .highlight {
+ input:focus ~ .highlight {
 	animation: inputHighlighter 0.3s ease;
 }
 

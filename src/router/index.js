@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/Home'
 import SignUp from '@/components/SignUp'
 import SignIn from '@/components/SignIn'
+import Bootstrap from '@/components/Bootstrap'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path:'/Home',
       name:'Home',
       component: Home
+  },
+  {
+      path:'/Bootstrap',
+      name:'Bootstrap',
+      component: Bootstrap
   },
   {
       path:'/SignUp',

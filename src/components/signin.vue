@@ -183,7 +183,7 @@
 }
 *{ box-sizing:border-box; }
 body {
-	font-family: Helvetica;
+	font-family: Palatino Linotype;
 	background: #eee;
   -webkit-font-smoothing: antialiased;
 }
