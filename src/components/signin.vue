@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div>
         <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7B68EE;">
           <div class="container">
             <a class="navbar-brand" href="#/home">
@@ -24,7 +24,7 @@
             </div>
           </div>
         </nav> -->
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
   <a class="navbar-brand" href="#/home">
       <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
   </a>
@@ -40,6 +40,9 @@
         <a class="nav-link link" href="#/SignUp">Signup</a>
       </li>
     </ul>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+        </button>
   </div>
 </nav>
    <form>
@@ -195,7 +198,7 @@ h1, h3 { font-weight: 300; }
 h1 { color: #636363; }
 h3 { color: #4a89dc; }
 form {
-	width: 380px;
+	width: 350px;
 	margin: 4em auto;
 	padding: 3em 2em 2em 2em;
 	background: #fafafa;

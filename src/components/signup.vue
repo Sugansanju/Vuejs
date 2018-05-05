@@ -49,19 +49,19 @@
 </hgroup>
   <div class="group">
     <input type="text" required><span class="highlight"></span><span class="bar"></span>
-<label>Name</label>
+<label class="group-label">Name</label>
   </div>
 <div class="group">
     <input type="email" required><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
+    <label class="group-label">Email</label>
   </div>
 <div class="group">
     <input type="text" required><span class="highlight"></span><span class="bar"></span>
-    <label>Mobile no</label>
+    <label class="group-label">Mobile no</label>
   </div>
 <div class="group">
     <input type="password" required><span class="highlight"></span><span class="bar"></span>
-    <label>Password</label>
+    <label class="group-label">Password</label>
   </div>
  <h4>Role</h4>
  <div class="group">
@@ -104,7 +104,9 @@
 .link{
     color:#fff;
 }
-*{ box-sizing:border-box; }
+*{
+    box-sizing:border-box;
+ }
 
 body {
 	font-family: Palatino Linotype;
@@ -123,9 +125,9 @@ h1 { color: #636363; }
 h3 { color: #4a89dc; }
 
 form {
-	width: 550px;
+	width: 400px;
 	margin: 4em auto;
-	padding: 3em 2em 2em 2em;
+	padding: 3em 2em;
 	background: #fafafa;
 	border: 1px solid #ebebeb;
 	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
@@ -168,7 +170,7 @@ label {
 
 /* active */
 
-input:focus ~ label, input.used ~ label {
+input:focus ~ .group-label, input.used ~ .group-label {
 	top: -20px;
   transform: scale(.75); left: -2px;
 
