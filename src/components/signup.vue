@@ -32,35 +32,49 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link" href="#/SignUp">Signup</a>
-        </li>
-      </ul>
+      <ul class="nav justify-content-end">
+      <b><h5><li class="nav-item">
+              <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link link" href="#/SignUp">Signup</a>
+          </li>
+          <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Login as
+         </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#/Teacher">Teacher</a>
+            <a class="dropdown-item" href="#">Student</a>
+            <a class="dropdown-item" href="#">Parent</a>
+          </div>
+          </li></h5></b>
+          </ul>
     </div>
-  </nav>
+    </nav>
    <div class="col-md-offset-8">
 <form>
 <hgroup>
   <h2>Signup</h2>
 </hgroup>
   <div class="group">
-    <input type="text" required><span class="highlight"></span><span class="bar"></span>
+    <input type="text" required><span class="highlight"></span>
+    <!-- <span class="bar"></span> -->
 <label class="group-label">Name</label>
   </div>
 <div class="group">
-    <input type="email" required><span class="highlight"></span><span class="bar"></span>
+    <input type="email" required><span class="highlight"></span>
+    <!-- <span class="bar"></span> -->
     <label class="group-label">Email</label>
   </div>
 <div class="group">
-    <input type="text" required><span class="highlight"></span><span class="bar"></span>
+    <input type="text" required><span class="highlight"></span>
+    <!-- <span class="bar"></span> -->
     <label class="group-label">Mobile no</label>
   </div>
 <div class="group">
-    <input type="password" required><span class="highlight"></span><span class="bar"></span>
+    <input type="password" required><span class="highlight"></span>
+    <!-- <span class="bar"></span> -->
     <label class="group-label">Password</label>
   </div>
  <h4>Role</h4>
@@ -78,13 +92,11 @@
   <label class="custom-control-label" for="customRadioInline3">Student</label>
 </div>
 </div>
-  <button type="submit" class="button align-self-baseline"style="background-color:#7B68EE;">
+  <!-- <button type="submit" class="button align-self-baseline" style="background-color:#7B68EE;">
+<a class="link" href="#/Teacher">
       Signup
-    <div class="ripples buttonRipples">
-        <span class="ripplesCircle">
-        </span>
-    </div>
-  </button>
+  </a> -->
+    <a href="#/Teacher" class="btn link"style="background-color:#7B68EE;" >Signup</a>
 </form>
 </div>
 <section id="lab_social_icon_footer">
@@ -104,9 +116,10 @@
 .link{
     color:#fff;
 }
-*{
-    box-sizing:border-box;
- }
+.nav{
+    background-color:#7B68EE;
+}
+
 
 body {
 	font-family: Palatino Linotype;
@@ -114,24 +127,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-hgroup {
-	text-align:center;
-}
-
-h1, h3 { font-weight: 150; }
-
-h1 { color: #636363; }
-
-h3 { color: #4a89dc; }
-
-form {
-	width: 400px;
-	margin: 4em auto;
-	padding: 3em 2em;
-	background: #fafafa;
-	border: 1px solid #ebebeb;
-	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
-}
 
 .group {
 	position: relative;
@@ -230,87 +225,6 @@ input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
 @keyframes inputHighlighter {
 	from { background: #4a89dc; }
 	to 	{ width: 0; background: transparent; }
-}
-
-
-/* Button */
-
-.button {
-  position: relative;
-  display: inline-block;
-  padding: 12px 24px;
-  margin: .3em 0 1em 0;
-  width: 100%;
-  vertical-align: middle;
-  color: #fff;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  letter-spacing: 1px;
-  background: transparent;
-  border: 0;
-  border-bottom: 2px solid #3160B6;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-.button:focus { outline: 0; }
-
-
-/* Button modifiers */
-
-.buttonBlue {
-  background: #4a89dc;
-  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
-}
-
-.buttonBlue:hover { background: #357bd8; }
-
-
-/* Ripples container */
-
-.ripples {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: transparent;
-}
-
-
-/* Ripples circle */
-
-.ripplesCircle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.ripples.is-active .ripplesCircle {
-  animation: ripples .4s ease-in;
-}
-
-
-/* Ripples animation */
-
-@keyframes ripples {
-  0% { opacity: 0; }
-
-  25% { opacity: 1; }
-
-  100% {
-    width: 200%;
-    padding-bottom: 200%;
-    opacity: 0;
-  }
 }
 /*  */
 </style>

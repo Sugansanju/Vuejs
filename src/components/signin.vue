@@ -24,7 +24,7 @@
             </div>
           </div>
         </nav> -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
   <a class="navbar-brand" href="#/home">
       <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
   </a>
@@ -32,23 +32,30 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link" href="#/SignUp">Signup</a>
-      </li>
-    </ul>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-        </button>
+    <ul class="nav justify-content-end">
+    <b><h5><li class="nav-item">
+            <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link" href="#/SignUp">Signup</a>
+        </li>
+        <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Login as
+       </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#/Teacher">Teacher</a>
+          <a class="dropdown-item" href="#">Student</a>
+          <a class="dropdown-item" href="#">Parent</a>
+        </div>
+        </li></h5></b>
+        </ul>
   </div>
-</nav>
-   <form>
-<hgroup>
+  </nav>
+ <form>
+  <div class="group">
   <h2>LOGIN</h2>
-</hgroup>
+</div>
   <div class="group">
     <input type="email" required>
     <span class="highlight">
@@ -58,15 +65,15 @@
     </label>
   </div>
   <div class="group">
-      <input type="password" required><span class="highlight"></span><span class="bar"></span>
+      <input type="password" required><span class="highlight"></span>
+      <!-- <span class="bar"></span> -->
       <label>Password</label>
     </div>
-  <button type="submit" class="button" style="background-color:#7B68EE;">login
-    <div class="ripples buttonRipples">
-        <span class="ripplesCircle">
-        </span>
-    </div>
-  </button>
+    <a href="#/Teacher" class="btn link"style="background-color:#7B68EE;" >Login</a>
+
+ <a class="" href="#">
+     Forgot Password?
+ </a>
 </form>
 <section id="lab_social_icon_footer">
 <!-- Include Font Awesome Stylesheet in Header -->
@@ -184,27 +191,16 @@
 .link{
     color:#fff;
 }
-*{ box-sizing:border-box; }
+.nav{
+    background-color:#7B68EE;
+}
+
 body {
 	font-family: Palatino Linotype;
 	background: #eee;
   -webkit-font-smoothing: antialiased;
 }
-hgroup {
-	text-align:center;
-	margin-top: 4em;
-}
-h1, h3 { font-weight: 300; }
-h1 { color: #636363; }
-h3 { color: #4a89dc; }
-form {
-	width: 350px;
-	margin: 4em auto;
-	padding: 3em 2em 2em 2em;
-	background: #fafafa;
-	border: 1px solid #ebebeb;
-	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
-}
+
 .group {
 	position: relative;
 	margin-bottom: 45px;
@@ -215,7 +211,7 @@ input {
 	-webkit-appearance: none;
 	display: block;
 	background: #fafafa;
-	color: #636363;
+	color: #010101;
 	width: 100%;
 	border: none;
 	border-radius: 0;

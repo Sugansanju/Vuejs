@@ -11,7 +11,7 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$primary:       $pink !default;
+
 
 $border-radius:               0rem !default;
 $border-radius-lg:            0rem !default;
@@ -20,9 +20,32 @@ $border-radius-sm:            0rem !default;
 $input-btn-focus-width:       0rem !default;
 
 $input-btn-focus-box-shadow:  0 0 0 0 !default;
+*{
+    box-sizing:border-box;
+ }
 
-* {
-  box-sizing: border-box;
+body {
+	font-family: Palatino Linotype;
+	background: #eee;
+  -webkit-font-smoothing: antialiased;
+}
+
+hgroup {
+	text-align:center;
+}
+
+h1, h3 { font-weight: 150; }
+
+h1 { color: #636363; }
+h3 { color: #4a89dc; }
+
+form {
+	width: 400px;
+	margin: 4em auto;
+	padding: 3em 2em;
+	background: #fafafa;
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
 }
 .form-control {
  border:none !important;

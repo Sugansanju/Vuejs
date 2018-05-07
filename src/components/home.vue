@@ -8,14 +8,24 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link" href="#/SignUp">Signup</a>
-      </li>
-    </ul>
+    <ul class="nav justify-content-end">
+    <b><h5><li class="nav-item">
+            <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link" href="#/SignUp">Signup</a>
+        </li>
+        <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Login as
+       </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#/Teacher">Teacher</a>
+          <a class="dropdown-item" href="#">Student</a>
+          <a class="dropdown-item" href="#">Parent</a>
+        </div>
+        </li></h5></b>
+        </ul>
   </div>
   </nav>
 <div class="container">
@@ -61,6 +71,17 @@ vue-image {
 .link{
     color:#fff;
 }
+.nav{
+    background-color:#7B68EE;
+}
+
+body {
+	font-family: Palatino Linotype;
+	background: #eee;
+  -webkit-font-smoothing: antialiased;
+}
+
+
 #lab_social_icon_footer {
   padding: 40px 0;
   background-color: #dedede;

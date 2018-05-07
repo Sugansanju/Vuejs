@@ -5,7 +5,7 @@ import Home from '@/components/Home'
 import SignUp from '@/components/SignUp'
 import SignIn from '@/components/SignIn'
 import Bootstrap from '@/components/Bootstrap'
-
+import Teacher from '@/components/Teacher'
 Vue.use(Router)
 
 export default new Router({
@@ -29,6 +29,11 @@ export default new Router({
       path:'/SignUp',
       name:'SignUp',
       component:SignUp
+  },
+  {
+      path:'/Teacher',
+      name:'Teacher',
+      component: Teacher
   },
   {
       path:'/SignIn',
