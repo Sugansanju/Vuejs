@@ -24,33 +24,31 @@
               </div>
             </div>
           </nav> -->
-          <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
-    <a class="navbar-brand" href="#/home">
-        <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
+          <nav class="nav navbar-expand-lg navbar-dark">
+    <a class="nav" href="#/home">
+        <img src="../assets/logo.png" style="max-width:35px; margin-top: -2px;" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav justify-content-end">
-      <b><h5><li class="nav-item">
-              <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
+
+          <li class="nav-item">
+              <a class="nav-link link ex1" href="#/SignIn">Signin
+                  <span class="sr-only">(current)</span>
+              </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link link" href="#/SignUp">Signup</a>
+              <a class="nav-link link ex1" href="#/SignUp">Signup</a>
           </li>
           <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle link ex1" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Login as
          </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#/Teacher">Teacher</a>
-            <a class="dropdown-item" href="#">Student</a>
-            <a class="dropdown-item" href="#">Parent</a>
+            <a class="dropdown-item ex1" href="#/Teacher">Teacher</a>
+            <a class="dropdown-item ex1" href="#">Student</a>
+            <a class="dropdown-item ex1" href="#">Parent</a>
           </div>
-          </li></h5></b>
+          </li>
           </ul>
-    </div>
     </nav>
    <div class="col-md-offset-8">
 <form>
@@ -96,7 +94,7 @@
 <a class="link" href="#/Teacher">
       Signup
   </a> -->
-    <a href="#/Teacher" class="btn link"style="background-color:#7B68EE;" >Signup</a>
+    <a href="#/Teacher" class="btn link ex2" >Signup</a>
 </form>
 </div>
 <section id="lab_social_icon_footer">
@@ -113,21 +111,6 @@
 </div>
 </template>
 <style>
-.link{
-    color:#fff;
-}
-.nav{
-    background-color:#7B68EE;
-}
-
-
-body {
-	font-family: Palatino Linotype;
-	background: #eee;
-  -webkit-font-smoothing: antialiased;
-}
-
-
 .group {
 	position: relative;
 	margin-bottom: 45px;
@@ -145,12 +128,6 @@ body {
 	border-bottom: 1px solid #757575;
 }
 
-
-input:focus { outline: none; }
-
-
-/* Label */
-
 label {
 	color: #999;
 	font-size: 18px;
@@ -162,71 +139,6 @@ label {
 	transition: all 0.2s ease;
 }
 
-
-/* active */
-
-input:focus ~ .group-label, input.used ~ .group-label {
-	top: -20px;
-  transform: scale(.75); left: -2px;
-
-	color: #4a89dc;
-}
-
-
-/* Underline */
-
-.bar {
-	position: relative;
-	display: block;
-	width: 100%;
-}
-
-.bar:before, .bar:after {
-	content: '';
-	height: 2px;
-	width: 0;
-	bottom: 1px;
-	position: absolute;
-	background: #4a89dc;
-	transition: all 0.2s ease;
-}
-
-.bar:before { left: 50%; }
-
-.bar:after { right: 50%; }
-
-
-/* active */
-
-input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
-
-
-/* Highlight */
-
-.highlight {
-	position: absolute;
-	height: 60%;
-	width: 100px;
-	top: 25%;
-	left: 0;
-	pointer-events: none;
-	opacity: 0.5;
-}
-
-
-/* active */
- input:focus ~ .highlight {
-	animation: inputHighlighter 0.3s ease;
-}
-
-
-/* Animations */
-
-@keyframes inputHighlighter {
-	from { background: #4a89dc; }
-	to 	{ width: 0; background: transparent; }
-}
-/*  */
 </style>
 <script>
 export default {

@@ -23,7 +23,79 @@ $input-btn-focus-box-shadow:  0 0 0 0 !default;
 *{
     box-sizing:border-box;
  }
+ .link{
+     color:#fff;
+ }
+ :root{
+     --main-primary-color:#315356;
+     --main-secondary-color:#9EC649;
+     --main-buttonfore-color:#000000;
+ }
+ .btn{
+     background-color:var(--main-secondary-color);
+ }
+a.ex1:hover, a.ex1:active {
+    color:var(--main-secondary-color);
+}
+a.ex2:hover, a.ex2:active{
+    color:var(--main-buttonfore-color);
+}
+ input:focus ~ .group-label, input.used ~ .group-label {
+ 	top: -20px;
+   transform: scale(.75); left: -2px;
 
+ 	color: var(--main-secondary-color);
+ }
+ input:focus { outline: none; }
+ .bar {
+ 	position: relative;
+ 	display: block;
+ 	width: 100%;
+ }
+
+ .bar:before, .bar:after {
+ 	content: '';
+ 	height: 2px;
+ 	width: 0;
+ 	bottom: 1px;
+ 	position: absolute;
+ 	background:var(--main-secondary-color);
+ 	transition: all 0.2s ease;
+ }
+
+ .bar:before { left: 50%; }
+
+ .bar:after { right: 50%; }
+
+
+ input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+
+ /* Highlight */
+
+ .highlight {
+ 	position: absolute;
+ 	height: 60%;
+ 	width: 100px;
+ 	top: 25%;
+ 	left: 0;
+ 	pointer-events: none;
+ 	opacity: 0.5;
+ }
+
+
+ /* active */
+  input:focus ~ .highlight {
+ 	animation: inputHighlighter 0.3s ease;
+ }
+
+
+ /* Animations */
+
+ @keyframes inputHighlighter {
+ 	from { background: var(--main-secondary-color); }
+ 	to 	{ width: 0; background: transparent; }
+}
 body {
 	font-family: Palatino Linotype;
 	background: #eee;
@@ -54,13 +126,11 @@ form {
 
 
 }
-
-
 .form-control:focus ~ label, .form-control.used ~ label {
 	top: -20px;
   transform: scale(.75); left: -2px;
 	/* font-size: 14px; */
-	color: #4a89dc;
+	color:var(--main-secondary-color);
 }
 
 
@@ -78,7 +148,7 @@ form {
 	width: 0;
 	bottom: 1px;
 	position: absolute;
-	background: #4a89dc;
+	background:var(--main-secondary-color);
 	transition: all 0.2s ease;
 }
 
@@ -125,6 +195,7 @@ form {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2) ;
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
+    background-color: var(--main-secondary-color);
     cursor: pointer;
 }
 .btn-wave {
@@ -144,26 +215,16 @@ form {
     transition: .3s ease-out;
 }
 }
-body {
-  margin: 0px;
-  font-family: 'segoe ui';
-}
-
 .nav {
   height: 50px;
   width: 100%;
-  background-color: #4d4d4d;
+  background-color: var(--main-primary-color);
   position: relative;
 }
-
-.nav > .nav-header {
-  display: inline;
-}
-
 .nav > .nav-header > .nav-title {
   display: inline-block;
   font-size: 22px;
-  color: #fff;
+  color: var(--main-secondary-color);
   padding: 10px 10px 10px 10px;
 }
 
@@ -181,17 +242,21 @@ body {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: var(--main-secondary-color);
 }
 
 .nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--main-secondary-color);
 }
 
 .nav > #nav-check {
   display: none;
 }
-
+.custom-control-input:disabled {
+  &:checked ~ .custom-control-label::before {
+    background-color:var(--main-secondary-color);
+  }
+}
 @media (max-width:600px) {
   .nav > .nav-btn {
     display: inline-block;
@@ -261,15 +326,6 @@ body {
     border: none !important;
     border-radius: 0 !important;
     border-bottom: 1px solid #757575 !important;
-}
-.link{
-    color:#fff;
-}
-.fore_color{
-    color:#7B68EE;
-}
-.background-color{
-    color:#7B68EE;
 }
 #lab_social_icon_footer {
   padding: 20px 0;

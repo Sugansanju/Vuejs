@@ -24,54 +24,52 @@
             </div>
           </div>
         </nav> -->
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B68EE;">
-  <a class="navbar-brand" href="#/home">
-      <img src="../assets/logo.png" style="max-width:35px; margin-top: -7px;" alt="">
+        <nav class="nav navbar-expand-lg navbar-dark">
+  <a class="nav" href="#/home">
+      <img src="../assets/logo.png" style="max-width:35px; margin-top: -2px;" alt="">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav justify-content-end">
-    <b><h5><li class="nav-item">
-            <a class="nav-link link" href="#/SignIn">Signin <span class="sr-only">(current)</span></a>
+
+        <li class="nav-item">
+            <a class="nav-link link ex1" href="#/SignIn">Signin
+                <span class="sr-only">(current)</span>
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link link" href="#/SignUp">Signup</a>
+            <a class="nav-link link ex1" href="#/SignUp">Signup</a>
         </li>
         <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle link ex1" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Login as
        </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#/Teacher">Teacher</a>
-          <a class="dropdown-item" href="#">Student</a>
-          <a class="dropdown-item" href="#">Parent</a>
+          <a class="dropdown-item ex1" href="#/Teacher">Teacher</a>
+          <a class="dropdown-item ex1" href="#">Student</a>
+          <a class="dropdown-item ex1" href="#">Parent</a>
         </div>
-        </li></h5></b>
+        </li>
         </ul>
-  </div>
   </nav>
  <form>
-  <div class="group">
+  <hgroup>
   <h2>LOGIN</h2>
-</div>
+</hgroup>
   <div class="group">
     <input type="email" required>
     <span class="highlight">
     </span>
-    <label>
+    <label class="group-label">
         Email
     </label>
   </div>
   <div class="group">
       <input type="password" required><span class="highlight"></span>
       <!-- <span class="bar"></span> -->
-      <label>Password</label>
+      <label class="group-label">Password</label>
     </div>
-    <a href="#/Teacher" class="btn link"style="background-color:#7B68EE;" >Login</a>
+    <a href="#/Teacher" class="btn link ex2">Login</a>
 
- <a class="" href="#">
+ <a class="" style="color:red;" href="#">
      Forgot Password?
  </a>
 </form>
@@ -188,19 +186,6 @@
 
 </template>
 <style>
-.link{
-    color:#fff;
-}
-.nav{
-    background-color:#7B68EE;
-}
-
-body {
-	font-family: Palatino Linotype;
-	background: #eee;
-  -webkit-font-smoothing: antialiased;
-}
-
 .group {
 	position: relative;
 	margin-bottom: 45px;
@@ -217,8 +202,7 @@ input {
 	border-radius: 0;
 	border-bottom: 1px solid #757575;
 }
-input:focus { outline: none; }
-/* Label */
+
 label {
 	color: #999;
 	font-size: 18px;
@@ -229,170 +213,7 @@ label {
 	top: 10px;
 	transition: all 0.2s ease;
 }
-/* active */
-input:focus ~ label, input.used ~ label {
-	top: -20px;
-  transform: scale(.75); left: -2px;
-	/* font-size: 14px; */
-	color: #4a89dc;
-}
-/* Underline */
-.bar {
-	position: relative;
-	display: block;
-	width: 100%;
-}
-.bar:before, .bar:after {
-	content: '';
-	height: 2px;
-	width: 0;
-	bottom: 1px;
-	position: absolute;
-	background: #4a89dc;
-	transition: all 0.2s ease;
-}
-.bar:before { left: 50%; }
-.bar:after { right: 50%; }
-/* active */
-input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
-/* Highlight */
-.highlight {
-	position: absolute;
-	height: 60%;
-	width: 100px;
-	top: 25%;
-	left: 0;
-	pointer-events: none;
-	opacity: 0.5;
-}
-/* active */
-input:focus ~ .highlight {
-	animation: inputHighlighter 0.3s ease;
-}
-/* Animations */
-@keyframes inputHighlighter {
-	from { background: #4a89dc; }
-	to 	{ width: 0; background: transparent; }
-}
-/* Button */
-.button {
-  position: relative;
-  display: inline-block;
-  padding: 12px 24px;
-  margin: .3em 0 1em 0;
-  width: 100%;
-  vertical-align: middle;
-  color: #fff;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  letter-spacing: 1px;
-  background: transparent;
-  border: 0;
-  border-bottom: 2px solid #3160B6;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-.button:focus { outline: 0; }
-/* Button modifiers */
-.buttonBlue {
-  background: #4a89dc;
-  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
-}
-.buttonBlue:hover { background: #357bd8; }
-/* Ripples container */
-.ripples {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: transparent;
-}
-/* Ripples circle */
-.ripplesCircle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-}
-.ripples.is-active .ripplesCircle {
-  animation: ripples .4s ease-in;
-}
-/* Ripples animation */
-@keyframes ripples {
-  0% { opacity: 0; }
-  25% { opacity: 1; }
-  100% {
-    width: 200%;
-    padding-bottom: 200%;
-    opacity: 0;
-  }
-}
-footer { text-align: center; }
-footer p {
-	color: #888;
-	font-size: 13px;
-	letter-spacing: .4px;
-}
-footer a {
-	color: #4a89dc;
-	text-decoration: none;
-	transition: all .2s ease;
-}
-footer a:hover {
-	color: #666;
-	text-decoration: underline;
-}
-footer img {
-	width: 80px;
-	transition: all .2s ease;
-}
-footer img:hover { opacity: .83; }
-footer img:focus , footer a:focus { outline: none; }
-#lab_social_icon_footer {
-  padding: 40px 0;
-  background-color: #dedede;
-}
-#lab_social_icon_footer a {
-  color: #333;
-}
-#lab_social_icon_footer .social:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-#lab_social_icon_footer .social {
-  -webkit-transform: scale(0.8);
-  /* Browser Variations: */
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-}
-/*
-    Multicoloured Hover Variations
-*/
-#lab_social_icon_footer #social-fb:hover {
-  color: #3B5998;
-}
-#lab_social_icon_footer #social-tw:hover {
-  color: #4099FF;
-}
-#lab_social_icon_footer #social-gp:hover {
-  color: #d34836;
-}
-#lab_social_icon_footer #social-insta:hover {
-  color:#e4405f;
-}
+
 </style>
 <script>
 export default {
